@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Payment</title>
+    <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Your Travel</h1>
+        <p>Click the button below to make a payment via Google Pay or any UPI app on mobile, or scan the QR code from desktop:</p>
+        
+        <!-- Button for Mobile UPI Payment -->
+        <a href="upi://pay?pa=yourUPIID@okaxis&pn=Vasant%20Hegde&am=100&cu=INR" class="payment-button">
+            Make Payment
+        </a>
+        
+        <p>Or scan this QR code to pay from your mobile app:</p>
+        
+        <!-- QR Code Image -->
+        <img src="qr_forpay.jpg" alt="Scan to Pay" class="qr-code">
+    </div>
+</body>
+</html>

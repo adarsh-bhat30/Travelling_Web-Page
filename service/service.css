@@ -1,0 +1,187 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    position: relative;
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('header_bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    background-color: #1e2a3a; /* Deep blue for the header background */
+}
+
+.header-overlay h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header-overlay p {
+    font-size: 1.1em;
+    font-weight: 400;
+    max-width: 600px;
+}
+
+/* Highlighted Section for Unexplored Gems */
+.highlight-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f0f5f5; /* Light teal background */
+    border-radius: 15px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+.slider {
+    position: relative;
+    width: 50%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #e0f7fa; /* Light cyan for the slider */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Arrows */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    outline: none;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Highlight Content */
+.highlight-content {
+    padding: 20px;
+    max-width: 500px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.highlight-content h3 {
+    font-size: 2em; 
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #1f8a70; /* Dark teal for header */
+}
+
+.highlight-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666; /* Subtle dark gray for text */
+}
+
+/* Service Cards */
+.service-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.service-content {
+    padding: 20px;
+}
+
+.service-content h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #333;
+}
+
+.service-content p {
+    font-size: 1em;
+    color: #777; /* Lighter gray for service description */
+}
+
+/* Footer */
+footer {
+    background: #1e2a3a; /* Same deep blue from header */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* Hover effects */
+.service-card:hover .service-img {
+    opacity: 0.9;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us - Explore the World</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <header>
+        <h1>Explore the World</h1>
+    </header>
+
+    <div class="container">
+        <section class="contact-section">
+            <h1>Contact Us</h1>
+            <p>If you have any questions, need help planning your trip, or just want to say hello, we’d love to hear from you! Please fill out the form below, and we'll get back to you as soon as possible.</p>
+
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <p><strong>Email:</strong> adarshbhat96@gmail.com</p>
+                <p><strong>Phone:</strong> +91 7676636932</p>
+                <p><strong>Address:</strong> Skywatch,Lions Nagar,Sirsi-581331</p>
+            </div>
+
+            <div class="form-container">
+                <!-- Update the form action URL to match your server -->
+                <form action="http://localhost:3002/submit_form" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="map-container">
+                <h2>Find Us</h2>
+                <p>Our office is located near Lions School Sirsi. Visit us or check the map below for directions.</p>
+                <div class="map-placeholder">
+                    <img src="location.jpg" alt="Map location" />
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Explore the World | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

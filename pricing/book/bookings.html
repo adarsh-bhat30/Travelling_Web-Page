@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bookings</h1>
+    <table id="bookingsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>UPI ID</th>
+                <th>Amount</th>
+                <th>Comments</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <script>
+        async function fetchBookings() {
+            try {
+                // Fetch bookings data from the API
+                const response = await fetch('http://127.0.0.1:3001/api/bookings'); // Adjust URL if needed
+                if (!response.ok) {
+                    throw new Error('Failed to fetch bookings.');
+                }
+                
+                // Parse the response as JSON
+                const bookings = await response.json();
+                const tableBody = document.querySelector('#bookingsTable tbody');
+                
+                // Iterate over the bookings and add them to the table
+                bookings.forEach(booking => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${booking.name}</td>
+                        <td>${booking.email}</td>
+                        <td>${booking.phone}</td>
+                        <td>${booking.upi_id}</td>
+                        <td>${booking.amount}</td>
+                        <td>${booking.comments}</td>
+                    `;
+                    tableBody.appendChild(row);
+                });
+            } catch (error) {
+                console.error(error);
+                alert(error.message);
+            }
+        }
+
+        // Fetch bookings when the page loads
+        window.onload = fetchBookings;
+    </script>
+</body>
+</html>
